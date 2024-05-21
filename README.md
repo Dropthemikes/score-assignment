@@ -41,7 +41,6 @@ tags:nhl
 * create folder called `build` in project and add .apk file, rename to `com.fivemobile.thescore.apk` (Version used for testing: com.fivemobile.thescore_24.8.0-33339.apk from APKMIRROR)
 * If necessary, Go to src/test/java/gaugeSteps/BaseClass to change appium device capabilities in the setUp method (device name, platform version, UDID, etc) Currently set to run on Pixel 6 emulator. (To find UDID, open cmd and enter `adb devices` while device is plugged in or emulator running.)
 * If necessary, change the email & password  for loginUser(); (currently set to my personal account)
-* 
 
 ## Running Test/Specification class
 * Make sure Appium is running and device or emulator is connected.
