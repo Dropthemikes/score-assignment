@@ -1,3 +1,25 @@
+## Purpose of Test
+The test will be run using the Gauge behaviour Driven Testing framework to go through a user-journey scenario of Logging in, navigating to the leagues page, selecting a league and verifying that the list of teams in the standings tab belong to the correct league.
+The scenarios can be found in the specs directory.
+
+Scenario example:
+```
+Leagues
+=====================
+tags: leagues, android
+
+* Navigate to "Leagues" Page
+
+User views NHL league standings
+----------------
+tags:nhl
+
+* Select "NHL" from leagues tab
+* Open "Standings" tab
+* Verify standings
+* Navigate to previous page
+```
+
 ## Pre-requisites
 1. Install Java, set JAVA_HOME in environment variables and add bin folder to path variables.
 2. Install Maven and set MAVEN_HOME & M2_HOME in environment variables and add bin folder to path variables.
@@ -11,7 +33,7 @@
 3. If Java plugin does not appear in list of plugins, open cmd and  enter `gauge install java`
 4. If html-report plugin does not appear in list of plugins, open cmd and enter `gauge install html-report`
 
-## Itellij Plugins
+## Intellij Plugins
 1. Open File>Settings>Plugins
 2. Install `Gauge` plugin
 
@@ -36,3 +58,7 @@ Run commands in terminal (Add  `test-compile` after mvn to get latest changes wh
 
 ## Viewing Gauge report
 * Double click `scoreAssignment\reports\html-report\index.html` to view report.  
+
+## Troubleshooting if there are compile issues
+* Build Project (Ctrl + F9)
+* run mvn clean, install.
