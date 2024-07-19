@@ -5,6 +5,7 @@
     "json-report",
     "xml-report",
     "flash",
-    "spectacle"
+    "spectacle",
+    "reportportal"
   ]
 }

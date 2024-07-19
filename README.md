@@ -50,7 +50,7 @@ All tests can be run directly from the .spec class in the `specs` directory. Eit
 Run commands in terminal (Add  `test-compile` after mvn to get latest changes when necessary)
 
 *  `mvn gauge:execute -DspecsDir=specs` Runs all specification classes (.spec) that are in the specs directory.
-*  `mvn gauge:execute -DspecsDir=specs -Dtags="***tagName***"` Use -Dtags to only run tests that are tagged with the assigned keyword. Multiple tags can be accepted (-Dtags="leagues & Android".) Tags can also be excluded as well using ! operator(D-tags="!leagues")
+*  `mvn gauge:execute -DspecsDir=specs -Dtags="***tagName***"` Use -Dtags to only run tests that are tagged with the assigned keyword. Multiple tags can be accepted (-Dtags="leagues & Android".) Tags can also be excluded as well using ! operator(Dtags="!leagues")
 *  `mvn gauge:execute -DspecsDir=specs -Denv="***environmentDirectory***"` Use -Denv to use property files other than default.
 *  `mvn gauge:execute -DspecsDir=specs -Dscenario="***scenarioName***"` use -Dscenario to run specific scenario using name of scenario, example -Dscenario="User views CFL league standings"
 *  `mvn gauge:execute -Dflags="--failed"` ReRuns any failed scenario from the previous run.

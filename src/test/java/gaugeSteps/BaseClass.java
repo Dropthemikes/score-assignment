@@ -28,15 +28,14 @@ public class BaseClass {
     public void setup() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("appium:deviceName", "Pixel 6a");
+        capabilities.setCapability("appium:deviceName", System.getenv("android.deviceName"));
         capabilities.setCapability("appium:automationName", "UIAutomator2");
-//           capabilities.setCapability("appium:udid","26171JEGR10583");
-        capabilities.setCapability("appium:udid", "emulator-5554");
+        capabilities.setCapability("appium:udid", System.getenv("android.udid"));
         capabilities.setCapability("appium:platformName", "Android");
-        capabilities.setCapability("appium:platformVersion", "14");
+        capabilities.setCapability("appium:platformVersion",  System.getenv("android.platformVersion"));
         capabilities.setCapability("appium:autoGrantPermissions", true);
-//        capabilities.setCapability("appPackage","com.fivemobile.thescore");
-//        capabilities.setCapability("appActivity","com.fivemobile.thescore.ui.MainActivity");
+        capabilities.setCapability("appPackage","com.fivemobile.thescore");
+        capabilities.setCapability("appActivity","com.fivemobile.thescore.ui.MainActivity");
         capabilities.setCapability("appium:app", System.getProperty("user.dir") + "/build/com.fivemobile.thescore.apk");
 
 
@@ -67,7 +66,7 @@ public class BaseClass {
 
 
     public void loginUser(String userName, String password) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(EMAIL_INPUT_FIELD_ID))).click();
+  //      wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(EMAIL_INPUT_FIELD_ID))).click();
         driver.findElement(By.id(EMAIL_INPUT_FIELD_ID)).sendKeys(userName);
         driver.findElement(By.id(PASSWORD_INPUT_FIELD_ID)).sendKeys(password);
         driver.findElement(By.id(LOG_IN_BUTTON_ID)).click();
